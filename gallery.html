@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - MitchDev</title>
+    <link rel="icon" href="img/MDLogo.png" type="image/icon type">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Great+Vibes&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="gallery-page">
+    <nav class="navbar scrolled">
+        <div class="container nav-container">
+            <a href="index.html" class="logo"><img src="img/MDLogo.png" alt="MitchDev Logo" class="logo-icon">
+                MitchDev<span>.</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#portfolio">Portfolio</a></li>
+                <li><a href="gallery.html" class="active">Our Gallery</a></li>
+                <li><a href="index.html#pricing">Pricing</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+
+                <li class="nav-item-theme">
+                    <label class="theme-switch" for="theme-toggle-chk" aria-label="Toggle Dark Mode">
+                        <input type="checkbox" id="theme-toggle-chk" />
+                        <div class="slider">
+                            <div class="slider-circle">
+                                <i class="fas fa-sun"></i>
+                                <i class="fas fa-moon"></i>
+                            </div>
+                        </div>
+                    </label>
+                </li>
+            </ul>
+            <div class="nav-actions">
+                <a href="index.html#contact" class="btn btn-primary hire-me">Hire Me</a>
+                <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="gallery-content">
+        <!-- DOST Highlights Combined Section -->
+        <section class="social-highlights section-padding bg-darker">
+            <div class="container">
+                <div class="section-header text-center fade-in">
+                    <h2 class="section-title">DOST <span>Highlights</span></h2>
+                    <p>Capturing the journey of Innovation and Robotics</p>
+                </div>
+
+                <div class="posts-flex-container">
+                    <!-- Day 1 Post -->
+                    <div class="post-card fade-in">
+                        <div class="post-header">
+                            <img src="img/Cess.jpg" alt="Author" class="author-img">
+                            <div class="author-info">
+                                <h4>CESS - Computer Engineering Student Society</h4>
+                                <span>March 10 at 1:45 PM · <i class="fas fa-globe-asia"></i></span>
+                            </div>
+                        </div>
+
+                        <div class="post-content truncated" id="dost-post-content-1" onclick="togglePost(1)">
+                            <p><strong>DAY 1</strong><br>
+                                A remarkable milestone for innovation and progress in Dagupan City!<br><br>
+                                As part of the dynamic lineup of activities spearheaded by the Department of Science and
+                                Technology (DOST) across the city, one of the most meaningful highlights was held at
+                                Universidad de Dagupan—the Ribbon Cutting and Signing Ceremony of the IHUB / Innovation
+                                Hub.<br><br>
+                                This significant event marks more than just the opening of a new facility; it represents
+                                a powerful commitment to nurturing creativity, research, entrepreneurship, and
+                                technological advancement within the region. The IHUB stands as a collaborative space
+                                where students, faculty, innovators, and industry partners can transform bold ideas into
+                                real-world solutions that address community needs and global challenges.<br><br>
+                                Through this initiative, DOST and Universidad de Dagupan strengthen their shared vision
+                                of building a future driven by science, technology, and innovation. The ceremony
+                                symbolizes unity, partnership, and a renewed dedication to empowering the next
+                                generation of engineers, researchers, and change-makers.<br><br>
+                                With the doors of the Innovation Hub now open, Dagupan City takes a confident step
+                                forward—fostering breakthroughs, cultivating talent, and inspiring a culture of
+                                innovation that will shape a smarter, more resilient tomorrow. 🚀</p>
+                            <span class="see-more">See more</span>
+                        </div>
+
+                        <div class="post-gallery">
+                            <div class="photo-grid grid-5">
+                                <div class="photo-item" onclick="openLightbox('day1', 0)"><img
+                                        src="img/imgCess/DOST/Day1/Picture1.jpg" alt="DOST Day 1"></div>
+                                <div class="photo-item" onclick="openLightbox('day1', 1)"><img
+                                        src="img/imgCess/DOST/Day1/Picture2.jpg" alt="DOST Day 1"></div>
+                                <div class="photo-item" onclick="openLightbox('day1', 2)"><img
+                                        src="img/imgCess/DOST/Day1/Picture3.jpg" alt="DOST Day 1"></div>
+                                <div class="photo-item" onclick="openLightbox('day1', 3)"><img
+                                        src="img/imgCess/DOST/Day1/Picture4.jpg" alt="DOST Day 1"></div>
+                                <div class="photo-item more-photos" data-count="+7" onclick="openLightbox('day1', 4)">
+                                    <img src="img/imgCess/DOST/Day1/Picture5.jpg" alt="DOST Day 1">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Day 2 Post -->
+                    <div class="post-card fade-in">
+                        <div class="post-header">
+                            <img src="img/Cess.jpg" alt="Author" class="author-img">
+                            <div class="author-info">
+                                <h4>CESS - Computer Engineering Student Society</h4>
+                                <span>March 11 at 10:30 AM · <i class="fas fa-globe-asia"></i></span>
+                            </div>
+                        </div>
+
+                        <div class="post-content truncated" id="dost-post-content-2" onclick="togglePost(2)">
+                            <p><strong>DAY 2!!!</strong><br>
+                                DOST Robotics excellence unleashed at CSI Stadia! 🤖🔥<br><br>
+                                Our Computer Engineering students proudly stepped into the RoboCup arena to compete in
+                                the highly challenging BIN COLLECTION category, bringing with them not just one, but two
+                                innovative robots engineered from the ground up. Each machine was the result of
+                                countless hours of designing, programming, assembling, and rigorous testing—showcasing
+                                their technical expertise in robotics, embedded systems, automation, and intelligent
+                                control.<br><br>
+                                On the competition floor, precision met strategy as the robots navigated obstacles,
+                                executed tasks, and demonstrated the power of teamwork and problem-solving under
+                                pressure. More than just a contest, this experience reflected the students’ passion for
+                                innovation and their commitment to transforming knowledge into real-world
+                                application.<br><br>
+                                From concept to competition, they proved that true engineering is built on dedication,
+                                creativity, and the courage to compete. 🚀✨</p>
+                            <span class="see-more">See more</span>
+                        </div>
+
+                        <div class="post-gallery">
+                            <div class="photo-grid grid-5">
+                                <div class="photo-item" onclick="openLightbox('day2', 0)"><img
+                                        src="img/imgCess/DOST/Day2/Picture1.jpg" alt="DOST Day 2"></div>
+                                <div class="photo-item" onclick="openLightbox('day2', 1)"><img
+                                        src="img/imgCess/DOST/Day2/Picture2.jpg" alt="DOST Day 2"></div>
+                                <div class="photo-item" onclick="openLightbox('day2', 2)"><img
+                                        src="img/imgCess/DOST/Day2/Picture3.jpg" alt="DOST Day 2"></div>
+                                <div class="photo-item" onclick="openLightbox('day2', 3)"><img
+                                        src="img/imgCess/DOST/Day2/Robot1.jpg" alt="DOST Day 2"></div>
+                                <div class="photo-item more-photos" data-count="+5" onclick="openLightbox('day2', 4)">
+                                    <img src="img/imgCess/DOST/Day2/Robot2.jpg" alt="DOST Day 2">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Day 3 Post -->
+                    <div class="post-card fade-in">
+                        <div class="post-header">
+                            <img src="img/Cess.jpg" alt="Author" class="author-img">
+                            <div class="author-info">
+                                <h4>CESS - Computer Engineering Student Society</h4>
+                                <span>March 12 at 2:15 PM · <i class="fas fa-globe-asia"></i></span>
+                            </div>
+                        </div>
+
+                        <div class="post-content truncated" id="dost-post-content-3" onclick="togglePost(3)">
+                            <p><strong>DAY 3!!!</strong><br>
+                                The culmination of a transformative journey! Day 3 was all about showcasing the final
+                                outputs and the remarkable talent of our upcoming engineers.<br><br>
+                                This successful event wouldn't have been possible without the dedication of every
+                                participant and the unwavering support of the Department of Science and Technology. We
+                                are ready to take on bigger challenges and keep innovating for a better future! 🌟🎓</p>
+                            <span class="see-more">See more</span>
+                        </div>
+
+                        <div class="post-gallery">
+                            <div class="photo-grid grid-5">
+                                <div class="photo-item" onclick="openLightbox('day3', 0)"><img
+                                        src="img/imgCess/DOST/Day3/Picture.jpg" alt="DOST Day 3"></div>
+                                <div class="photo-item" onclick="openLightbox('day3', 1)"><img
+                                        src="img/imgCess/DOST/Day3/Picture1.jpg" alt="DOST Day 3"></div>
+                                <div class="photo-item" onclick="openLightbox('day3', 2)"><img
+                                        src="img/imgCess/DOST/Day3/Picture2.jpg" alt="DOST Day 3"></div>
+                                <div class="photo-item" onclick="openLightbox('day3', 3)"><img
+                                        src="img/imgCess/DOST/Day3/Picture3.jpg" alt="DOST Day 3"></div>
+                                <div class="photo-item more-photos" data-count="+2" onclick="openLightbox('day3', 4)">
+                                    <img src="img/imgCess/DOST/Day3/Picture4.jpg" alt="DOST Day 3">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lightbox Modal -->
+        <div id="gallery-lightbox" class="lightbox">
+            <span class="close-lightbox" onclick="closeLightbox()">&times;</span>
+            <div class="lightbox-content">
+                <img id="lightbox-img" src="" alt="Full view">
+            </div>
+            <a class="prev" onclick="changeImage(-1)">&#10094;</a>
+            <a class="next" onclick="changeImage(1)">&#10095;</a>
+            <div class="lightbox-caption" id="lightbox-caption"></div>
+        </div>
+
+        <!-- Featured Post Section -->
+        <section class="featured-post section-padding">
+            <div class="container">
+                <div class="section-header text-center fade-in">
+                    <h2 class="section-title">Featured <span>Project</span></h2>
+                    <p>Highlight of our latest work and achievements</p>
+                </div>
+                <div class="featured-card">
+                    <div class="featured-image">
+                        <img src="img/MitchBlog.png" alt="Featured Post Image">
+                    </div>
+                    <div class="featured-info">
+                        <span class="category">Web Development</span>
+                        <h3>Revolutionizing Digital Presence</h3>
+                        <p>A deep dive into how we transformed a simple blog into a full-fledged dynamic platform with
+                            high engagement and modern aesthetics. This project showcases our commitment to quality and
+                            user-centric design.</p>
+                        <div class="featured-meta">
+                            <span><i class="far fa-calendar-alt"></i> March 10, 2026</span>
+                            <span><i class="far fa-user"></i> MitchDev Team</span>
+                        </div>
+                        <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Collage Section -->
+        <section class="gallery-collage section-padding bg-darker">
+            <div class="container">
+                <div class="section-header text-center fade-in">
+                    <h2 class="section-title">Visual <span>Journey</span></h2>
+                    <p>A collection of moments, designs, and inspiration</p>
+                </div>
+                <div class="collage-grid">
+                    <div class="collage-item large fade-in">
+                        <img src="img/CeoMitch.png" alt="Gallery Image 1" referrerPolicy="no-referrer">
+                        <div class="collage-overlay">
+                            <span>Leadership</span>
+                        </div>
+                    </div>
+                    <div class="collage-item fade-in">
+                        <img src="img/Finance Dashboard.jpg" alt="Gallery Image 2" referrerPolicy="no-referrer">
+                        <div class="collage-overlay">
+                            <span>UI Design</span>
+                        </div>
+                    </div>
+                    <div class="collage-item fade-in">
+                        <img src="img/Fitness Tracker.jpg" alt="Gallery Image 3" referrerPolicy="no-referrer">
+                        <div class="collage-overlay">
+                            <span>Mobile App</span>
+                        </div>
+                    </div>
+                    <div class="collage-item tall fade-in">
+                        <img src="img/Mitch.png" alt="Gallery Image 4" referrerPolicy="no-referrer">
+                        <div class="collage-overlay">
+                            <span>Inspiration</span>
+                        </div>
+                    </div>
+                    <div class="collage-item fade-in">
+                        <img src="img/UDDlogo.jpg" alt="Gallery Image 5" referrerPolicy="no-referrer">
+                        <div class="collage-overlay">
+                            <span>Affiliations</span>
+                        </div>
+                    </div>
+                    <div class="collage-item wide fade-in">
+                        <img src="img/Cess.jpg" alt="Gallery Image 6" referrerPolicy="no-referrer">
+                        <div class="collage-overlay">
+                            <span>Community</span>
+                        </div>
+                    </div>
+                    <div class="collage-item fade-in">
+                        <img src="img/SOE.jpg" alt="Gallery Image 7" referrerPolicy="no-referrer">
+                        <div class="collage-overlay">
+                            <span>Engineering</span>
+                        </div>
+                    </div>
+                    <div class="collage-item fade-in">
+                        <img src="img/Social Network API.jpg" alt="Gallery Image 8" referrerPolicy="no-referrer">
+                        <div class="collage-overlay">
+                            <span>Systems</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container text-center">
+            <p>&copy; 2026 MitchDev. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Specific sticky navbar for gallery page
+        const nav = document.querySelector('.navbar');
+        nav.classList.add('scrolled');
+
+        // Lightbox Logic
+        const galleries = {
+            day1: [
+                "img/imgCess/DOST/Day1/Picture1.jpg",
+                "img/imgCess/DOST/Day1/Picture2.jpg",
+                "img/imgCess/DOST/Day1/Picture3.jpg",
+                "img/imgCess/DOST/Day1/Picture4.jpg",
+                "img/imgCess/DOST/Day1/Picture5.jpg",
+                "img/imgCess/DOST/Day1/Pictures6.jpg",
+                "img/imgCess/DOST/Day1/Picture7.jpg",
+                "img/imgCess/DOST/Day1/Picture8.jpg",
+                "img/imgCess/DOST/Day1/Picture9.jpg",
+                "img/imgCess/DOST/Day1/Picture10.jpg",
+                "img/imgCess/DOST/Day1/Picture10.1.jpg",
+                "img/imgCess/DOST/Day1/BackgroundPicture.jpg"
+            ],
+            day2: [
+                "img/imgCess/DOST/Day2/Picture1.jpg",
+                "img/imgCess/DOST/Day2/Picture2.jpg",
+                "img/imgCess/DOST/Day2/Picture3.jpg",
+                "img/imgCess/DOST/Day2/Robot1.jpg",
+                "img/imgCess/DOST/Day2/Robot2.jpg",
+                "img/imgCess/DOST/Day2/Robot3.jpg",
+                "img/imgCess/DOST/Day2/Robot4.jpg",
+                "img/imgCess/DOST/Day2/Robot5.jpg",
+                "img/imgCess/DOST/Day2/MayorBelenPicture.jpg",
+                "img/imgCess/DOST/Day2/DOSTbg.jpg"
+            ],
+            day3: [
+                "img/imgCess/DOST/Day3/Picture.jpg",
+                "img/imgCess/DOST/Day3/Picture1.jpg",
+                "img/imgCess/DOST/Day3/Picture2.jpg",
+                "img/imgCess/DOST/Day3/Picture3.jpg",
+                "img/imgCess/DOST/Day3/Picture4.jpg",
+                "img/imgCess/DOST/Day3/Picture5.jpg",
+                "img/imgCess/DOST/Day3/Picture6.jpg"
+            ]
+        };
+
+        let currentImgIndex = 0;
+        let currentGallery = [];
+
+        function openLightbox(galleryId, index) {
+            const lightbox = document.getElementById('gallery-lightbox');
+            const img = document.getElementById('lightbox-img');
+            const caption = document.getElementById('lightbox-caption');
+
+            currentGallery = galleries[galleryId];
+            currentImgIndex = index;
+
+            img.src = currentGallery[currentImgIndex];
+            caption.innerText = `Photo ${currentImgIndex + 1} of ${currentGallery.length}`;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('gallery-lightbox');
+            lightbox.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        function changeImage(step) {
+            currentImgIndex += step;
+            if (currentImgIndex >= currentGallery.length) currentImgIndex = 0;
+            if (currentImgIndex < 0) currentImgIndex = currentGallery.length - 1;
+
+            const img = document.getElementById('lightbox-img');
+            const caption = document.getElementById('lightbox-caption');
+
+            img.style.animation = 'none';
+            img.offsetHeight;
+            img.style.animation = null;
+
+            img.src = currentGallery[currentImgIndex];
+            caption.innerText = `Photo ${currentImgIndex + 1} of ${currentGallery.length}`;
+        }
+
+        function togglePost(id) {
+            const content = document.getElementById(`dost-post-content-${id}`);
+            content.classList.toggle('truncated');
+            content.classList.toggle('expanded');
+        }
+
+        // Close on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === "Escape") closeLightbox();
+            if (e.key === "ArrowRight") changeImage(1);
+            if (e.key === "ArrowLeft") changeImage(-1);
+        });
+    </script>
+</body>
+
+</html>

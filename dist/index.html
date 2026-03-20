@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MitchDev - Full Stack Designer & Developer</title>
     <link rel="icon" href="/assets/MDLogo-yNqk6BSc.png" type="image/icon type">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Great+Vibes&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" crossorigin href="/assets/index-DfJ3eERk.css">
+  <link rel="stylesheet" crossorigin href="/assets/index-D6igC9S3.css">
 </head>
 
 <body>
@@ -21,8 +22,10 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="gallery.html">Our Gallery</a></li>
                 <li><a href="#pricing">Pricing</a></li>
                 <li><a href="#contact">Contact</a></li>
+
                 <li class="nav-item-theme">
                     <label class="theme-switch" for="theme-toggle-chk" aria-label="Toggle Dark Mode">
                         <input type="checkbox" id="theme-toggle-chk" />
@@ -51,11 +54,47 @@
                 <p>I craft responsive websites and applications with a focus on modern design and user experience.</p>
                 <div class="hero-btns">
                     <a href="#contact" class="btn btn-primary">Let's Talk</a>
+                    <div class="hero-logos">
+                        <a href="https://www.facebook.com/udd1984" target="_blank" class="logo-link"
+                            title="Universidad de Dagupan">
+                            <div class="logo-3d-wrapper">
+                                <img src="/assets/UDDlogo-B-1DW19m.jpg" alt="UDD Logo" class="mini-logo">
+                            </div>
+                        </a>
+                        <a href="javascript:void(0)" class="logo-link" id="open-video" title="Watch SOE Video">
+                            <div class="logo-3d-wrapper">
+                                <img src="/assets/SOE-CMHr-ART.jpg" alt="SOE Logo" class="mini-logo">
+                            </div>
+                        </a>
+                        <a href="https://www.facebook.com/UdDCESS" target="_blank" class="logo-link"
+                            title="Computer Engineering Student Society">
+                            <div class="logo-3d-wrapper">
+                                <img src="/assets/Cess-DTOYQ2_Q.jpg" alt="CESS Logo" class="mini-logo lighten-logo">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Video Modal -->
+            <div id="video-modal" class="video-modal">
+                <div class="modal-content">
+                    <span class="close-modal">&times;</span>
+                    <video id="hero-video" controls>
+                        <source src="/assets/KnowledgeFiest-BR4CglFi.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
             </div>
             <div class="hero-image fade-in">
                 <div class="geometric-frame">
                     <img src="/assets/Mitch-CaetB3zZ.png" alt="MitchDev" referrerPolicy="no-referrer">
+                    <div class="signature-container">
+                        <svg viewBox="0 0 500 150" class="signature-svg">
+                            <image href="/assets/MDLogo-yNqk6BSc.png" x="60" y="65" width="60" height="60" class="signature-logo" />
+                            <text x="300" y="35%" text-anchor="middle" class="signature-subtitle">BSCPE</text>
+                            <text x="300" y="85%" text-anchor="middle" class="signature-text">Salazar</text>
+                        </svg>
+                    </div>
                 </div>
             </div>
         </div>
@@ -65,7 +104,10 @@
     <section id="about" class="about section-padding">
         <div class="container about-container">
             <div class="about-image slide-in-left">
-                <img src="/assets/CeoMitch-kWzyA3GT.png" alt="About MitchDev" referrerPolicy="no-referrer">
+                <div class="about-3d-card">
+                    <img src="/assets/CeoMitch-kWzyA3GT.png" alt="About MitchDev" referrerPolicy="no-referrer">
+                    <div class="card-glass"></div>
+                </div>
             </div>
             <div class="about-content slide-in-right">
                 <h2 class="section-title">About <span>Me</span></h2>
@@ -147,12 +189,12 @@
             </div>
             <div class="portfolio-grid">
                 <div class="portfolio-item fade-in">
-                    <img src="/assets/MitchBlog-C8BjAZHq.png" alt="Project 1" referrerPolicy="no-referrer">
+                    <img src="/assets/MitchBlog-BKvuAw1r.png" alt="Project 1" referrerPolicy="no-referrer">
                     <div class="portfolio-overlay">
                         <div class="portfolio-info">
                             <h3>Mitch-Blog</h3>
                             <span>Web Development</span>
-                            <a href="#" class="btn btn-sm btn-primary">View Project</a>
+                            <a href="https://mitch-dev-blog.web.app/" class="btn btn-sm btn-primary">View Project</a>
                         </div>
                     </div>
                 </div>

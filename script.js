@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.clientHeight;
-            if (scrollY >= (sectionTop - 200)) {
+            if (window.scrollY >= (sectionTop - 200)) {
                 current = section.getAttribute('id');
             }
         });
@@ -60,20 +60,27 @@ document.addEventListener('DOMContentLoaded', () => {
     const observerOptions = {
         root: null,
         rootMargin: '0px',
-        threshold: 0.15
+        threshold: 0.1
     };
 
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
-            if (entry.isIntersecting) {
+            if (entry.isIntersecting || entry.intersectionRatio > 0) {
                 entry.target.classList.add('visible');
                 observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
 
-    document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right').forEach(element => {
+    const animateElements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right');
+    animateElements.forEach(element => {
         observer.observe(element);
+        // Immediate fallback check
+        const rect = element.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+            element.classList.add('visible');
+            observer.unobserve(element);
+        }
     });
 
     // Dark Mode Toggle Logic

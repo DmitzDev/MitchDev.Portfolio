@@ -906,95 +906,6 @@ body.dark-mode .navbar.scrolled {
     transform: translateY(0);
 }
 
-.pricing-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-}
-
-.pricing-card {
-    background-color: var(--bg-card);
-    padding: 50px 40px;
-    border-radius: 8px;
-    text-align: center;
-    border: 1px solid var(--border-color);
-    transition: var(--transition);
-    position: relative;
-}
-
-.pricing-card:hover {
-    transform: translateY(-10px);
-    border-color: var(--primary-color);
-}
-
-.pricing-card.popular {
-    border-color: var(--primary-color);
-    transform: scale(1.05);
-}
-
-.pricing-card.popular:hover {
-    transform: scale(1.05) translateY(-10px);
-}
-
-.badge {
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-color: var(--primary-color);
-    color: var(--bg-color);
-    padding: 5px 15px;
-    font-size: 0.8rem;
-    font-weight: 700;
-    border-bottom-left-radius: 8px;
-    border-top-right-radius: 8px;
-}
-
-.pricing-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-}
-
-.price {
-    font-size: 3.5rem;
-    font-weight: 700;
-    color: var(--primary-color);
-    margin-bottom: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-}
-
-.price span {
-    font-size: 1.5rem;
-    margin-top: 10px;
-    margin-right: 5px;
-}
-
-.features {
-    margin-bottom: 40px;
-    text-align: left;
-}
-
-.features li {
-    margin-bottom: 15px;
-    color: var(--text-main);
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.features li i {
-    color: var(--primary-color);
-}
-
-.features li.disabled {
-    color: var(--text-muted);
-    text-decoration: line-through;
-}
-
-.features li.disabled i {
-    color: var(--text-muted);
-}
 
 
 .contact-container {
@@ -1094,7 +1005,8 @@ footer p {
 .fade-in {
     opacity: 0;
     transform: translateY(30px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
+    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: opacity, transform;
 }
 
 .fade-in.visible {
@@ -1105,7 +1017,8 @@ footer p {
 .slide-in-left {
     opacity: 0;
     transform: translateX(-50px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
+    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: opacity, transform;
 }
 
 .slide-in-left.visible {
@@ -1116,12 +1029,18 @@ footer p {
 .slide-in-right {
     opacity: 0;
     transform: translateX(50px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
+    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: opacity, transform;
 }
 
 .slide-in-right.visible {
     opacity: 1;
     transform: translateX(0);
+}
+
+/* Fallback for cases where JS might take long to run */
+.hero-content, .hero-image, .section-title {
+    animation-fill-mode: forwards;
 }
 
 @media (max-width: 1024px) {

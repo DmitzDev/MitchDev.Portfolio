@@ -665,15 +665,51 @@ body.dark-mode .navbar.scrolled {
     transition: transform 0.1s ease-out;
 }
 
-.about-3d-card img {
+.about-img-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+}
+
+.about-img-container img {
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 12px;
     filter: grayscale(100%);
-    transition: filter 0.5s ease, box-shadow 0.5s ease;
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1), filter 0.5s ease, box-shadow 0.5s ease;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
     transform: translateZ(30px);
+}
+
+.about-img-1 {
+    opacity: 1;
+    z-index: 1;
+}
+
+.about-img-2 {
+    opacity: 0;
+    z-index: 0;
+    object-fit: contain !important; 
+    background-color: var(--bg-card);
+    padding: 20px; /* This effectively "zooms out" the image relative to the frame */
+    box-sizing: border-box;
+}
+
+/* Swap on Hover (Desktop) and Show-Alt Class (Mobile Tap) */
+.about-3d-card:hover .about-img-1,
+.about-3d-card.show-alt-mobile .about-img-1 {
+    opacity: 0;
+    z-index: 0;
+}
+
+.about-3d-card:hover .about-img-2,
+.about-3d-card.show-alt-mobile .about-img-2 {
+    opacity: 1;
+    z-index: 1;
 }
 
 .card-glass {
@@ -1039,7 +1075,9 @@ footer p {
 }
 
 /* Fallback for cases where JS might take long to run */
-.hero-content, .hero-image, .section-title {
+.hero-content,
+.hero-image,
+.section-title {
     animation-fill-mode: forwards;
 }
 

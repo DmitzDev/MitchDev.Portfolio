@@ -114,21 +114,30 @@ document.addEventListener('DOMContentLoaded', () => {
             const btn = contactForm.querySelector('button');
             const originalText = btn.textContent;
 
-            btn.textContent = 'Preparing email...';
+            btn.textContent = 'Sending Message...';
             btn.disabled = true;
 
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const message = document.getElementById('message').value;
 
-            const subject = encodeURIComponent(`Portfolio Contact from ${name}`);
-            const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
-
-            // Redirect to mailto link
-            window.location.href = `mailto:mitchellesalazar33@gmail.com?subject=${subject}&body=${body}`;
-
-            setTimeout(() => {
-                btn.textContent = 'Email App Opened!';
+            // Submit using FormSubmit.co AJAX
+            fetch("https://formsubmit.co/ajax/mitchellesalazar33@gmail.com", {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify({
+                    name: name,
+                    email: email,
+                    message: message,
+                    _subject: `New Message from Portfolio: ${name}`
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                btn.textContent = 'Message Sent Successfully!';
                 btn.style.backgroundColor = '#10b981';
                 btn.style.color = 'white';
                 btn.style.borderColor = '#10b981';
@@ -139,8 +148,20 @@ document.addEventListener('DOMContentLoaded', () => {
                     btn.textContent = originalText;
                     btn.disabled = false;
                     btn.style = '';
+                }, 5000);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                btn.textContent = 'Failed to Send. Try Again.';
+                btn.style.backgroundColor = '#ef4444';
+                btn.style.color = 'white';
+                btn.disabled = false;
+                
+                setTimeout(() => {
+                    btn.textContent = originalText;
+                    btn.style = '';
                 }, 3000);
-            }, 1000);
+            });
         });
     }
     // Magnetic Navbar Links
@@ -260,6 +281,14 @@ document.addEventListener('DOMContentLoaded', () => {
         // Close on overlay click
         videoModal.addEventListener('click', (e) => {
             if (e.target === videoModal) closeFunc();
+        });
+    }
+
+    // About Image Swap Logic (Mobile Link or Tap Support)
+    const aboutCard = document.querySelector('.about-3d-card');
+    if (aboutCard) {
+        aboutCard.addEventListener('click', () => {
+            aboutCard.classList.toggle('show-alt-mobile');
         });
     }
 
